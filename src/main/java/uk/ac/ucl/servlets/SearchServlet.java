@@ -25,8 +25,10 @@ public class SearchServlet extends HttpServlet
     // Use the model to do the search and put the results into the request object sent to the
     // Java Server Page used to display the results.
     Model model = ModelFactory.getModel();
-    List<String> searchResult = model.searchFor(request.getParameter("searchstring"));
-    request.setAttribute("result", searchResult);
+    String keyword = request.getParameter("searchstring");
+    List<List<String>> searchResult = model.searchFor(keyword);
+    request.setAttribute("title", searchResult.get(0));
+    request.setAttribute("notes", searchResult.get(1));
 
     // Invoke the JSP page.
     ServletContext context = getServletContext();
