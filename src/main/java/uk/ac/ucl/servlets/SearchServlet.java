@@ -14,21 +14,18 @@ import uk.ac.ucl.model.ModelFactory;
 import java.io.IOException;
 import java.util.List;
 
-// The servlet invoked to perform a search.
-// The url http://localhost:8080/runsearch.html is mapped to calling doPost on the servlet object.
-// The servlet object is created automatically, you just provide the class.
+
 @WebServlet("/runsearch.html")
 public class SearchServlet extends HttpServlet
 {
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
   {
-    // Use the model to do the search and put the results into the request object sent to the
-    // Java Server Page used to display the results.
+
     Model model = ModelFactory.getModel();
     String keyword = request.getParameter("searchstring");
     List<List<String>> searchResult = model.searchFor(keyword);
-    request.setAttribute("title", searchResult.get(0));
-    request.setAttribute("notes", searchResult.get(1));
+    request.setAttribute("Index", searchResult.get(0));
+    request.setAttribute("Title", searchResult.get(1));
 
     // Invoke the JSP page.
     ServletContext context = getServletContext();

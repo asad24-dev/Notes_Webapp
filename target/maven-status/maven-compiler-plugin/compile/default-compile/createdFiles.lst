@@ -1,0 +1,9 @@
+uk\ac\ucl\model\ModelFactory.class
+uk\ac\ucl\model\Model.class
+uk\ac\ucl\servlets\AllNotesServlet.class
+uk\ac\ucl\main\Main.class
+uk\ac\ucl\servlets\AddNoteServlet.class
+uk\ac\ucl\servlets\SearchServlet.class
+uk\ac\ucl\servlets\ViewNoteServlet.class
+uk\ac\ucl\servlets\DeleteNoteServlet.class
+uk\ac\ucl\servlets\EditNoteServlet.class
