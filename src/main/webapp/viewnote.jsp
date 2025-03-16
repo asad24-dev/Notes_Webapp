@@ -10,7 +10,7 @@
 <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="AllNotes.jsp">All Notes</a></li>
+        <li><a href="allnotes.html?category=">All Notes</a></li>
         <button id="dark-mode-toggle">🌙 Toggle Dark Mode</button>
     </ul>
 </nav>

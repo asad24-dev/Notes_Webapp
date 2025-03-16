@@ -20,6 +20,7 @@ public class AllNotesServlet extends HttpServlet {
         // Get category from request
         String category = request.getParameter("category");
 
+
         // Get all notes filtered by category
         List<List<String>> notes = model.filterNotesByCategory(category);
         request.setAttribute("notes", notes);
